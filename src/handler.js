@@ -62,7 +62,6 @@ const addBookHandler = (request, h) => {
     }).code(201);
     return response;
   }
-
   const response = h.response({
     status: 'fail',
     message: 'Buku gagal ditambahkan',
@@ -108,13 +107,13 @@ const getBookByIdHandler = (request, h) => {
     }).code(200);
     return response;
   }
-
   const response = h.response({
     status: 'fail',
     message: 'Buku tidak ditemukan',
   }).code(404);
   return response;
 };
+
 const editBookByIdHandler = (request, h) => {
   const { bookId } = request.params;
   const {
